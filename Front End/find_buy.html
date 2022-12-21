@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<title> Find and buy items </title>
+	<style type="text/css">
+		#content {
+			text-align: center;
+			margin-top: 50px;
+		}
+		table {
+			margin-left: auto;
+			margin-right: auto;
+			border: 1px solid black;
+		}
+		th, td {
+			padding: 10px;
+			border: 1px solid black;
+		}
+		#home {
+			text-align: right;
+		}
+	</style>
+</head>
+<body>
+	<div id="home">
+		<button onclick="location.href='./customer_home.html'"> Home </button>
+	</div>
+	<div id="content">
+		<h1> Find and Buy Items </h1>
+		<form>
+			<span id="location"> </span> <br> <br>
+			<input type="text" placeholder="Search" id="search_text"> <br> <br>
+			<input type="button" value="Find" onclick="generate_item_list(this)">
+		</form>
+		<br> <br>
+		<form>
+			<table name="result_table" id="item_table"></table>
+			<br>
+			<input type="button" value="Buy" onclick="buy_items(this)">
+		</form>
+	</div>
+	<script type="text/javascript" src="find_buy.js"></script>
+</body>
+</html>

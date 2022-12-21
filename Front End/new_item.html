@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script type="text/javascript" src="corporate_auth.js"></script>
+	<title>New Item Creation</title>
+	<style type="text/css">
+		#content {
+			text-align: center;
+			margin-top: 50px;
+		}
+		table {
+			margin-left: auto;
+			margin-right: auto;
+			border: 1px solid black;
+		}
+		th, td {
+			padding: 10px;
+			border:  1px solid black;
+		}
+		#logout {
+			text-align: right;
+		}
+	</style>
+</head>
+<body>
+	<div id="logout"> 
+		<button onclick="location.href='./corporate_home.html'"> Home </button>
+		<button onclick="logout_corporate(this)"> Logout </button> <br> <br>
+		<div> You're logged in as: <span id="display_name"/> </div>
+		<script type="text/javascript">
+			document.getElementById("display_name").innerHTML = display_name;
+		</script>
+	</div>
+	<div id="content">
+		<h1> Create New Item </h1>
+		<form>
+			<input type="text" placeholder="SKU" id="sku">
+			<input type="text" placeholder="Name" id="item_name">
+			<input type="text" placeholder="Price" id="price">
+			<input type="text" placeholder="Description" id="item_description">
+			<input type="text" placeholder="Max in shelf" id="maxQ">
+			<input type="button" value="Create" onclick="create_item(this)">
+		</form>
+		<br> 
+		<br>
+		<br>
+		<h3> List of Items </h3>
+		<table name="result_table"></table>
+	</div>
+	<script type="text/javascript" src="new_item.js"></script>
+</body>
+</html>

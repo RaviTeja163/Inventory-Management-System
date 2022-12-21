@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script type="text/javascript" src="manager_auth_redirect.js"></script>
+	<title>Manager Login</title>
+	<style type="text/css">
+		#content {
+			text-align: center;
+			margin-top: 50px;
+		}
+		#header {
+			text-align: right;
+			margin-top: 20px;
+			margin-right: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div id="header">
+		<button onclick="location.href='./index.html'"> Back </button>
+	</div>
+	<div id="content"> 
+	<h1> Manager Login </h1>
+	<form>
+		<label>Username: </label>
+		<input type="text" id="login_id"> <br> <br>
+		<label>Password: </label>
+		<input type="password" id="password"> <br> <br> 
+		<input type="button" value="Login" onclick="auth_manager(this)">
+	</form>
+	</div>
+	<script type="text/javascript" src="manager_login.js"></script>
+</body>
+</html>

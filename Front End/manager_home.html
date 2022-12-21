@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script type="text/javascript" src="manager_auth.js"></script>
+	<title>Manager Home</title>
+	<style type="text/css">
+		#content {
+			text-align: center;
+			margin-top: 50px;
+		}
+		button {
+			margin: 20px;
+		}
+		#logout {
+			text-align: right;
+		}
+	</style>
+</head>
+<body>
+	<div id="logout"> 
+		<button onclick="logout_manager(this)"> Logout </button> <br>
+		<div> You're logged in as: <span id="display_name"/> </div>
+		<script type="text/javascript">
+			document.getElementById("display_name").innerHTML = display_name;
+		</script>
+	</div>
+	<div id="content">
+		<h1> Manager Home </h1> 
+		<button onclick="location.href='./process_shipment.html'">Process Shipment</button> <br>
+		<button onclick="location.href='./store_report_manager.html'">Inventory Report</button> <br>
+		<button onclick="location.href='./overstock_report.html'">Overstock Report</button> <br>
+		<button onclick="location.href='./fill_stock.html'">Fill Shelves</button> <br>
+		<button onclick="location.href='./missing_stock.html'">Show Missing Items</button> <br>
+	</div>
+</body>
+</html>

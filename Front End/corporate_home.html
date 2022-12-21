@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script type="text/javascript" src="corporate_auth.js"></script>
+	<title>Corporate Home</title>
+	<style type="text/css">
+		#content {
+			text-align: center;
+			margin-top: 50px;
+		}
+		button {
+			margin: 20px;
+		}
+		#logout {
+			text-align: right;
+		}
+	</style>
+</head>
+<body>
+	<div id="logout"> 
+		<button onclick="logout_corporate(this)"> Logout </button> <br>
+		<div> You're logged in as: <span id="display_name"/> </div>
+		<script type="text/javascript">
+			document.getElementById("display_name").innerHTML = display_name;
+		</script>
+	</div>
+	<div id="content">
+		<h1> Corporate Home </h1> 
+		<button onclick="location.href='./new_item.html'">Create New Item</button> <br>
+		<button onclick="location.href='./create_store.html'">Create New Store</button> <br>
+		<button onclick="location.href='./assign_item.html'">Assign Item Location</button> <br>
+		<button onclick="location.href='./list_stores_corporate.html'">List All Stores</button> <br>
+		<button onclick="location.href='./remove_store.html'">Remove Store</button> <br>
+		<button onclick="location.href='./total_report.html'">Generate Total Inventory Report</button> <br>
+		<button onclick="location.href='./store_report_corporate.html'">Generate Store Inventory Report</button> <br>
+	</div>
+</body>
+</html>

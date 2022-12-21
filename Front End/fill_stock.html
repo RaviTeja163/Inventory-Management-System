@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script type="text/javascript" src="manager_auth.js"></script>
+	<title> Fill Stock </title>
+	<style type="text/css">
+		#content {
+			text-align: center;
+			margin-top: 50px;
+		}
+		table {
+			margin-left: auto;
+			margin-right: auto;
+		}
+		td {
+			text-align: left;
+		}
+		#logout {
+			text-align: right;
+		}
+	</style>
+</head>
+<body>
+	<div id="logout"> 
+		<button onclick="location.href='./manager_home.html'"> Home </button>
+		<button onclick="logout_manager(this)"> Logout </button> <br> <br>
+		<div> You're logged in as: <span id="display_name"/> </div>
+		<script type="text/javascript">
+			document.getElementById("display_name").innerHTML = display_name;
+		</script>
+	</div>
+	<div id="content">
+		<h1> Fill to Maximum </h1>
+		<form>
+			<table> 
+			<tr>
+				<td> <input type="radio" id="html" name="products"> </td>
+				<td> <label>All</label> </td>
+			</tr>
+			<tr> 
+				<td> <input type="radio" id="css" name="products"> </td>
+				<td> <label>Items: <input type="text" id="items" placeholder="SKU1, SKU2, ..." size="50"> </label> </td>
+			</tr>
+			</table> <br>
+			<input type="button" value="Fill Stock"  onclick="fill(this);">
+ 		</form>
+	</div>
+    <script type="text/javascript" src="fill_stock.js"></script>
+</body>
+</html>
